@@ -1,0 +1,15 @@
+/Users/joshua/CodePrat/Examples/bin/Debug/net5.0/Examples.deps.json
+/Users/joshua/CodePrat/Examples/bin/Debug/net5.0/Examples.runtimeconfig.json
+/Users/joshua/CodePrat/Examples/bin/Debug/net5.0/Examples.runtimeconfig.dev.json
+/Users/joshua/CodePrat/Examples/bin/Debug/net5.0/Examples.dll
+/Users/joshua/CodePrat/Examples/bin/Debug/net5.0/ref/Examples.dll
+/Users/joshua/CodePrat/Examples/bin/Debug/net5.0/Examples.pdb
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.csprojAssemblyReference.cache
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.AssemblyInfoInputs.cache
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.AssemblyInfo.cs
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.csproj.CoreCompileInputs.cache
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.dll
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/ref/Examples.dll
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.pdb
+/Users/joshua/CodePrat/Examples/obj/Debug/net5.0/Examples.genruntimeconfig.cache
