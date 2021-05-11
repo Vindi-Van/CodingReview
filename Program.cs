@@ -31,7 +31,7 @@ namespace Examples
             */
 
             //ShoppingOptions
-            Console.log(Amazon.ShoppingOptions);
+            Console.WriteLine("Shopping Option : " + Amazon.ShoppingOptions());
 
             ////////////////////////////////////////////////////////////
             //JudgeCircle
@@ -40,8 +40,8 @@ namespace Examples
             */
 
             //Coin Combination (Dynamic Programming)
-            int[] coins = new int[] {1,2,5};
-            Console.WriteLine("Coin Combination: " + CoinCombination());
+            //int[] coins = new int[] {1,2,5};
+            //Console.WriteLine("Coin Combination: " + Example.CoinCombination(10, coins));
 
             
         }

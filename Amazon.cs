@@ -102,7 +102,7 @@ public static class Amazon{
         int budget = 10;
         //Already 6 dollars since Shoe is just one. will compare with the remaining 3 arrays.
         budget = 4;
-        return 5;
+        return budget;
     
     }
 }
