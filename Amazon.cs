@@ -1,4 +1,7 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public static class Amazon{
     // Find groups of users that or connected or cities that are connected
@@ -28,26 +31,20 @@ public static class Amazon{
     // Find if Robot return to ORIGIN
     public static bool RobotBoundInCircle(string direction) {
         int[][] dir = new int[][] {
-            new int[] {-1,0},
             new int[] {0,1},
             new int[] {1,0},
             new int[] {0,-1},
+            new int[] {-1,0},
         };
         var currentDir = 0;
-        int[] currentPosition = new int[]{0,1};
+        int[] currentPosition = new int[]{0,0};
 
         foreach (char a in direction)
         {
             switch(a){
                 case 'G':
-                    var x = currentPosition[0];
-                    var y = currentPosition[1];
-
-                    var d = dir[currentDir];
-                    var new_x = d[0];
-                    var new_y = d[1];
-                    currentPosition[0] = new_x;
-                    currentPosition[1] = new_y;
+                    currentPosition[0] += dir[currentDir][0];
+                    currentPosition[1] += dir[currentDir][1];
                     break;
                 case 'L':
                     currentDir = (currentDir + 3) % 4;
@@ -60,5 +57,52 @@ public static class Amazon{
             }
         }
         return (currentDir != 0) || ( currentPosition[0] == 0 && currentPosition[1] == 0);
+    }
+
+    // Optimizing Box Weights
+    public static List<int> OptimizeBox(int[] nums){
+        Array.Sort(nums);
+        List<int> newNums = new List<int>(nums);
+        
+        int i = nums.Length - 1;
+        List<int> temp = new List<int>();
+        while( i >= 0 ){
+            int targetNumber = newNums[i];
+
+            List<int> tempChecker = new List<int>(newNums);
+            tempChecker.RemoveAt(i);
+            if( tempChecker.Contains( targetNumber )){
+                // skip
+                i--;
+            }else {
+                newNums.RemoveAt(i);
+                //Console.WriteLine(String.Join(" ", nums));
+                int tempTotal =  temp.Sum() + targetNumber;
+                if(tempTotal < newNums.Sum()){
+                    temp.Add(targetNumber);
+                    i--;
+                } else {
+                    temp.Add(targetNumber);
+                    break;
+                }
+            }
+            
+        }
+        temp.Sort();
+        return temp;
+    }
+
+    //Shopping Options
+    public static int ShoppingOptions(){
+        int[] priceOfJean = new int[]{2,3};
+        int[] priceOfShoes = new int[]{4};
+        int[] priceOfSkirts = new int[]{2,3};
+        int[] priceofTops = new int[]{1,2};
+    
+        int budget = 10;
+        //Already 6 dollars since Shoe is just one. will compare with the remaining 3 arrays.
+        budget = 4;
+        return 5;
+    
     }
 }
