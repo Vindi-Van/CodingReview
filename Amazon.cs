@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 
 public static class Amazon{
+    //https://algo.monster/problems/amazon_online_assessment_questions
+    //https://leetcode.com/discuss/interview-question/1183360/Amazon-Online-Assesment-Questions
+
     // Find groups of users that or connected or cities that are connected
     public static int FindGroupAudible(int[][] isConnected) {
         int result = 0;
@@ -104,5 +107,30 @@ public static class Amazon{
         budget = 4;
         return budget;
     
+    }
+
+    public static List<string> TopNumCompetitors(int numCompetitors,
+        int topNCompetitors,
+        List<string> competitors,
+        int numReviews, List<string> reviews)
+    {
+        if (competitors == null || reviews == null) return null;
+        competitors = competitors.ConvertAll(d => d.ToLower());// to handle case in-sensitive
+        Dictionary<string, int> competitorsFreqMap = competitors.ToDictionary(k => k, v => 0);
+        for (int i = 0; i < numReviews; i++)
+        {
+            string currentReview = reviews[i].ToLower();
+            foreach (string competitor in competitors.Where(comp => currentReview.Contains(comp)))
+            {
+                competitorsFreqMap[competitor]++; //increase freq count if present in review
+            }
+        }
+
+        List<string> result = competitorsFreqMap.OrderByDescending(descKv => descKv.Value)
+            .Take(topNCompetitors)
+            .Select(kv => kv.Key)
+            .ToList();
+
+        return result;
     }
 }

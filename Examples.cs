@@ -31,7 +31,7 @@ public static class Example{
     //Example of dynamic programing (given coins, find the number of combinations to get to the target $$)
     public static int CoinCombination(int amount, int[] coins){
         int[] dp = new int[amount + 1];
-        dp[0]=1;
+        dp[0] = 1;
         
         foreach(var coin in coins){
             for(int x = coin; x < amount + 1; ++x){
