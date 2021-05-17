@@ -6,6 +6,22 @@ namespace Examples
     {
         static void Main(string[] args)
         {
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////
+            ///// Udemy Coding Course (one with map)
+            ///////////////////////////////////////////////////////////////////////////////////////////////
+            
+            //// Sample of using timer to see how long a function takes
+            //StopWatchEx.StopWatchTest();
+
+            //// Compares 2 arrays to see if there is any common items
+            var stg1 = new string[]{"a", "b", "c", "x"};
+            var stg2 = new string[]{"z", "y","x"};
+            Console.WriteLine(ArrayEx.ContainsCommonType(stg1, stg2));
+
+            ///////////////////////////////////////////////////////////////////////////////////////////////
+            /////Amzaon Questions
+            ///////////////////////////////////////////////////////////////////////////////////////////////
             //Group Audible Questions
             /*
             int[][] Group = new int[][]{ 
@@ -31,7 +47,7 @@ namespace Examples
             */
 
             //ShoppingOptions
-            Console.WriteLine("Shopping Option : " + Amazon.ShoppingOptions());
+            //Console.WriteLine("Shopping Option : " + Amazon.ShoppingOptions());
 
             ////////////////////////////////////////////////////////////
             //JudgeCircle
