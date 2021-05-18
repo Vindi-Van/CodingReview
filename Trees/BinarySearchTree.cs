@@ -112,7 +112,7 @@ class BinarySearchTree
             }
             else
             { //We have a have a left node, lets find the leftmost
-                Node replacementParentNode = nodeToRemove;
+                BSTNode replacementParentNode = nodeToRemove;
                 while (replacementNode.left != null)
                 {
                     replacementParentNode = replacementNode;
