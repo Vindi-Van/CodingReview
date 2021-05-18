@@ -1,5 +1,6 @@
 using System;
 
+/* 
 public class Node
 {
     public int value { get; set; }
@@ -10,7 +11,7 @@ public class Node
         this.value = value;
         this.next = null;
     }
-}
+}*/
 
 public class LinkedList
 {
