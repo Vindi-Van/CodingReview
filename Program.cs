@@ -15,9 +15,29 @@ namespace Examples
             //StopWatchEx.StopWatchTest();
 
             //// Compares 2 arrays to see if there is any common items
-            var stg1 = new string[]{"a", "b", "c", "x"};
-            var stg2 = new string[]{"z", "y","x"};
-            Console.WriteLine(ArrayEx.ContainsCommonType(stg1, stg2));
+            //var stg1 = new string[]{"a", "b", "c", "x"};
+            //var stg2 = new string[]{"z", "y","x"};
+            //Console.WriteLine(ArrayEx.ContainsCommonType(stg1, stg2));
+
+            //// Check if array has pair with sum
+            //var numset = new int[]{6,4,3,2,1,7};
+            //Console.WriteLine(ArrayEx.HasPairWithSum(numset, 10));
+
+            //// ArraySamples and MyArray
+            //ArrayEx.ArraySamples();
+
+            //MyArray myArray = new MyArray();
+            //myArray.push("Hello");
+            //myArray.push("World");
+            //myArray.push("!");
+            //for (int i = 0; i < myArray.length; i++)
+            //{
+            //    Console.WriteLine(myArray.get(i));
+            //}
+
+
+
+
 
             ///////////////////////////////////////////////////////////////////////////////////////////////
             /////Amzaon Questions
