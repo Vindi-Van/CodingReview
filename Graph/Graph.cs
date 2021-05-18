@@ -20,6 +20,7 @@ class Graph
 
     public void addEdge(int value1, int value2)
     {
+        // Undirected
         adjacentList[value1].Add(value2);
         adjacentList[value2].Add(value1);
     }
