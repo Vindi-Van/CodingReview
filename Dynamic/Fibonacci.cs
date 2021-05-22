@@ -4,7 +4,8 @@ using System.Collections.Generic;
 
 class Fibonacci_DP
 {
-    // O(n)
+    // O(n) - time complexity
+    // O(n) - space complexity ?
     private static Dictionary<int, int> cache = new Dictionary<int, int>();
 
     public static int fibonacciMaster(int n)
