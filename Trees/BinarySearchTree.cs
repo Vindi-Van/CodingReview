@@ -16,7 +16,7 @@ class BSTNode
 
 class BinarySearchTree
 {
-    private BSTNode root;
+    public BSTNode root;
     public BinarySearchTree()
     {
         this.root = null;
@@ -172,5 +172,27 @@ class BinarySearchTree
 
         // Process left child  
         print2DUtil(root.left, space);
+    }
+    public bool validateBST(BSTNode node, int? min = null, int? max = null){
+        // Empty tree
+        if( node == null){
+            return true;
+        }
+        // Check conditions
+        if(max != null && node.value >= max) {
+            return false;
+        }
+        if(min != null && node.value <= min){
+            return false;
+        }
+        //checks all left
+        if( node.left != null && !validateBST(node.left, min, node.value)){
+            return false;
+        }
+        //checks all right
+        if( node.right != null && !validateBST(node.right, node.value, max)){
+            return false;
+        }
+        return true;
     }
 }

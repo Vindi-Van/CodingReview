@@ -57,6 +57,33 @@ namespace Examples
             graph.showConnections();
             */
 
+            //// Binary Search Tree
+            
+            BinarySearchTree tree = new BinarySearchTree();
+            tree.insert(9);
+            tree.insert(4);
+            tree.insert(6);
+            tree.insert(20);
+            tree.insert(170);
+            tree.insert(15);
+            tree.insert(1);
+
+            tree.printTree(tree.root);
+            // BreadthFirstSearch
+            var bfsList = BreadthFirstSearch.breathFirstSearch(tree.root);
+            Console.Write("Breadth first search ");
+            Console.WriteLine(String.Join(",", bfsList));
+            // DepthFirstSearch
+            var dfsInOrder = DepthFirstSearch.DFSInOrder(tree.root);
+            Console.Write("Depth first search inOrder ");
+            Console.WriteLine(String.Join(",", dfsInOrder));
+            var dfsPreOrder = DepthFirstSearch.DFSPreOrder(tree.root);
+            Console.Write("Depth first search preOrder ");
+            Console.WriteLine(String.Join(",", dfsPreOrder));
+            var dfsPostOrder = DepthFirstSearch.DFSPostOrder(tree.root);
+            Console.Write("Depth first search postOrder ");
+            Console.WriteLine(String.Join(",", dfsPostOrder));
+
 
             ///////////////////////////////////////////////////////////////////////////////////////////////
             /////Amzaon Questions
